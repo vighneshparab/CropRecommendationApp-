@@ -36,10 +36,20 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // CORS configuration
-const allowedOrigins = [process.env.CLIENT_URL || "http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://crop-recommendation-app-eosin.vercel.app",
+];
+
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
