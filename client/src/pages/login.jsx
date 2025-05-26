@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import zxcvbn from "zxcvbn"; // For password strength checking
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [otpEmail, setOtpEmail] = useState("");
   const [otpSent, setOtpSent] = useState(false);
@@ -43,9 +44,9 @@ const LoginPage = () => {
       // ✅ Access role from nested credentials
       const role = data.user.credentials?.role;
       if (role === "admin") {
-        window.location.href = "/admin-dashboard";
+        navigate("/admin-dashboard");
       } else {
-        window.location.href = "/profile";
+        navigate("/profile");
       }
     } catch (err) {
       setError(err.message);
