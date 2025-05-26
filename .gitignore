@@ -1,0 +1,34 @@
+# Root-level dependencies
+node_modules/
+.env
+.vscode/
+dist/
+*.log
+
+# Vite build output (in client)
+client/dist/
+client/node_modules/
+client/.env
+client/.DS_Store
+
+# React/Vite cache
+client/.vite/
+client/.cache/
+
+# Server-side dependencies and uploads
+server/node_modules/
+server/.env
+server/uploads/
+    
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: exclude test coverage
+coverage/

@@ -1,0 +1,128 @@
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#about-us {
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.features-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.features-section .feature-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.features-section .feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.features-section .feature-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.features-section .feature-icon {
+    color: #4CAF50;
+    /* Customize the icon color */
+}
+
+.features-section .feature-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+.blockquote {
+    font-size: 1rem;
+    color: #555;
+    border-left: 5px solid #4CAF50;
+    padding-left: 15px;
+}
+
+.blockquote-footer {
+    color: #666;
+    font-size: 0.9rem;
+}
