@@ -8,7 +8,7 @@ import {
   updateProfile,
   uploadProfilePicture,
   getUserProfile,
-} from "../controllers/userController.js";
+} from "../controllers/UserController.js";
 
 import authenticate from "../middleware/authMiddleware.js";
 
