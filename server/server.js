@@ -38,7 +38,7 @@ app.use(express.json());
 // CORS configuration
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://crop-recommendation-app-eosin.vercel.app",
+  "https://crop-recommendation-app-five.vercel.app",
 ];
 
 app.use(
