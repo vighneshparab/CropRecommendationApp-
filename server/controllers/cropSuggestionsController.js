@@ -7,7 +7,7 @@ export const getCropPrediction = async (req, res) => {
   try {
     // 1. Get prediction from external API
     const apiResponse = await axios.post(
-      "https://crop-prediction-api-production-2ebd.up.railway.app/predict",
+      "https://crop-ml-api-1.onrender.com/predict",
       req.body
     );
     const predictedCrop = apiResponse.data.predicted_crop;
